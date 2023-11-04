@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  vars:
+    resource_group_name: "resource-group-exp"
+    cosmosdb_account_name: "account-exp"
+  tasks:
+    - name: Create a resource group
+      azure_rm_resourcegroup:
+        name: "{{ resource_group_name }}"
+        location: "Germany West Central"
+
+    - name: Create instance of Cosmos DB Account
+      azure_rm_cosmosdbaccount:
+        resource_group: "{{ resource_group_name }}"
+        name: "{{ cosmosdb_account_name }}"
+        consistency_policy:
+          default_consistency_level: "strong"
+        geo_rep_locations:
+          - name: germanywestcentral
+            failover_priority: 0

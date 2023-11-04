@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  vars:
+    resource_group_name: "resource-group-exp"
+  tasks:
+    - name: Create a resource group
+      azure_rm_resourcegroup:
+        state: absent
+        name: "{{ resource_group_name }}"
+        force_delete_nonempty: true

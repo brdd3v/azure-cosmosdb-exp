@@ -18,7 +18,7 @@ account = cosmosdb.Account('account',
                            ),
                            geo_locations=[
                                cosmosdb.AccountGeoLocationArgs(
-                                   location='switzerlandnorth',
+                                   location='germanywestcentral',
                                    failover_priority=0
                                )
                            ])

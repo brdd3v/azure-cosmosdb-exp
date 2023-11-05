@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from common_funcs import (
     RESOURCE_GROUP_NAME,
     ACCOUNT_NAME,

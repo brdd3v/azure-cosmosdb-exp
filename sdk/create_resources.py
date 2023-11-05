@@ -67,7 +67,7 @@ def main():
             "properties": {
                 "resource": {
                     "id": CONTAINER_NAME,
-                    "partitionKey": {"kind": "Hash", "paths": ["/Country"]},
+                    "partitionKey": {"kind": "Hash", "paths": ["/Country"], "version": 1},
                 }
             }
         }

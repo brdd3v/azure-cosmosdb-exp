@@ -13,6 +13,7 @@
       azure_rm_cosmosdbaccount:
         resource_group: "{{ resource_group_name }}"
         name: "{{ cosmosdb_account_name }}"
+        database_account_offer_type: "Standard"
         consistency_policy:
           default_consistency_level: "strong"
         geo_rep_locations:
